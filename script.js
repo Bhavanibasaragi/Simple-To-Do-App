@@ -1,16 +1,25 @@
 let tasks = [];
 
+function handleKey(event) {
+  if (event.key === "Enter") {
+    addTask();
+  }
+}
+
 function addTask() {
   let input = document.getElementById("taskInput");
 
-  let task = input.value;
+  let text = input.value;
 
-  if (task === "") {
-    alert("Please enter a task");
+  if (text === "") {
+    alert("Enter a task");
     return;
   }
 
-  tasks.push(task);
+  tasks.push({
+    text: text,
+    done: false,
+  });
 
   input.value = "";
 
@@ -25,11 +34,24 @@ function displayTasks() {
   for (let i = 0; i < tasks.length; i++) {
     let li = document.createElement("li");
 
-    li.innerHTML =
-      tasks[i] + " <button onclick='deleteTask(" + i + ")'>Delete</button>";
+    li.innerHTML = `<div>
+<input type="checkbox" ${tasks[i].done ? "checked" : ""} onclick="toggleTask(${i})">
+
+<span class="task-text ${tasks[i].done ? "completed" : ""}">
+${tasks[i].text}
+</span>
+</div>
+
+<button class="delete" onclick="deleteTask(${i})">Delete</button>`;
 
     list.appendChild(li);
   }
+}
+
+function toggleTask(index) {
+  tasks[index].done = !tasks[index].done;
+
+  displayTasks();
 }
 
 function deleteTask(index) {

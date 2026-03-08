@@ -1,18 +1,137 @@
 body {
-  font-family: Arial;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+
+.background {
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Main Card */
+
+.app {
+  width: 420px;
+
+  background: #eeeeee;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Section */
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 input {
-  padding: 8px;
-  width: 200px;
+  flex: 1;
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  border: 1px solid #ccc;
 }
 
-button {
-  padding: 8px;
+/* Green Add Button */
+
+.add-btn {
+  background: #28a745;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
 }
+
+.add-btn:hover {
+  background: #218838;
+}
+
+/* Task List */
+
+ul {
+  padding: 0;
+}
+
+/* Task Card */
 
 li {
   list-style: none;
-  margin: 10px;
+
+  background: #dddddd;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  margin-bottom: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+/* Task Text */
+
+.task-text {
+  flex: 1;
+  margin-left: 8px;
+}
+
+/* Completed */
+
+.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+/* Delete Button */
+
+.delete {
+  background: #ff4d4d;
+
+  color: white;
+
+  border: none;
+
+  padding: 6px 12px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: #cc0000;
 }
