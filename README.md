@@ -29,10 +29,10 @@ JavaScript – for implementing the application logic
 📂 Project Structure
 simple-todo-app
 │
-├── index.html      # Main HTML file
-├── style.css       # Styling for the app
-├── script.js       # JavaScript logic
-└── README.md       # Project documentation
+├── index.html # Main HTML file
+├── style.css # Styling for the app
+├── script.js # JavaScript logic
+└── README.md # Project documentation
 🚀 How to Run the Project
 
 Download or clone the repository.
@@ -52,3 +52,7 @@ Click the Add Task button.
 The task will appear in the task list.
 
 Click Delete to remove the task.
+
+## App Preview
+
+![alt text](<Screenshot 2026-03-08 104102.png>)
